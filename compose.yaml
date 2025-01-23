@@ -10,7 +10,7 @@ services:
         - linux/arm64
     restart: unless-stopped
     ports:
-      - 8000:8000
+      - 8888:8000
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://0.0.0.0:8000/health"]
       interval: 30s
