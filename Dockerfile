@@ -44,4 +44,4 @@ ENV HF_HUB_ENABLE_HF_TRANSFER=0
 # https://www.reddit.com/r/StableDiffusion/comments/1f6asvd/gradio_sends_ip_address_telemetry_by_default/
 ENV DO_NOT_TRACK=1
 EXPOSE 8888
-CMD ["uvicorn", "--factory", "speaches.main:create_app"]
+CMD ["uvicorn", "--factory", "--host", "0.0.0.0", "--port", "8888", "speaches.main:create_app"]
